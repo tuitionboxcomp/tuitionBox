@@ -1,0 +1,354 @@
+/* ==================== JOIN PAGE SPECIFIC STYLES ==================== */
+
+/* Join Hero Section */
+.join-hero {
+    background: linear-gradient(135deg, #FF8C00 0%, #FF6A00 50%, #FF4500 100%);
+    padding: 100px 10% 80px;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.join-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.join-hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.join-hero h1 span {
+    font-weight: 800;
+    background: linear-gradient(to right, #fff, #FFE4B5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.join-hero .subtitle {
+    font-size: 20px;
+    opacity: 0.95;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+/* Join Page Content */
+.join-page {
+    padding: 80px 10%;
+    background: var(--light-bg);
+}
+
+.join-box {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.join-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Info Cards */
+.info-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-orange), var(--primary-blue));
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.info-card:hover::before {
+    transform: scaleX(1);
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.info-card .card-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.info-card:hover .card-icon {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.info-card h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.info-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-card ul li {
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 1.8;
+    padding: 12px 0 12px 35px;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.info-card ul li:last-child {
+    border-bottom: none;
+}
+
+.info-card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, var(--primary-orange), var(--primary-blue));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.info-card ul li strong {
+    color: var(--primary-orange);
+    font-weight: 600;
+}
+
+/* CTA Box */
+.cta-box {
+    background: linear-gradient(135deg, rgba(255, 140, 0, 0.05) 0%, rgba(0, 123, 255, 0.05) 100%);
+    padding: 50px 40px;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid rgba(255, 140, 0, 0.2);
+}
+
+.cta-text {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 40px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: var(--transition);
+    min-width: 280px;
+}
+
+.btn-whatsapp:hover {
+    background: #20BA5A;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.btn-blue {
+    display: inline-block;
+    padding: 16px 40px;
+    background: var(--primary-blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: var(--transition);
+    min-width: 280px;
+}
+
+.btn-blue:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 768px) {
+    .join-hero {
+        padding: 80px 5% 60px;
+        min-height: 300px;
+    }
+
+    .join-hero h1 {
+        font-size: 36px;
+    }
+
+    .join-hero .subtitle {
+        font-size: 18px;
+    }
+
+    .join-page {
+        padding: 60px 5%;
+    }
+
+    .info-card {
+        padding: 30px 25px;
+    }
+
+    .info-card h2 {
+        font-size: 24px;
+    }
+
+    .info-card .card-icon {
+        font-size: 42px;
+    }
+
+    .info-card ul li {
+        font-size: 15px;
+        padding: 10px 0 10px 32px;
+    }
+
+    .cta-box {
+        padding: 40px 30px;
+    }
+
+    .cta-text {
+        font-size: 20px;
+    }
+
+    .btn-whatsapp,
+    .btn-blue {
+        min-width: 100%;
+        padding: 14px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .join-hero h1 {
+        font-size: 28px;
+    }
+
+    .join-hero .subtitle {
+        font-size: 16px;
+    }
+
+    .info-card {
+        padding: 25px 20px;
+    }
+
+    .info-card h2 {
+        font-size: 22px;
+    }
+
+    .info-card .card-icon {
+        font-size: 38px;
+    }
+
+    .info-card ul li {
+        font-size: 14px;
+        padding: 8px 0 8px 30px;
+    }
+
+    .info-card ul li::before {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+
+    .cta-box {
+        padding: 35px 25px;
+    }
+
+    .cta-text {
+        font-size: 18px;
+    }
+
+    .btn-whatsapp,
+    .btn-blue {
+        padding: 12px 24px;
+        font-size: 15px;
+    }
+}
+
+/* ==================== ANIMATIONS ==================== */
+.fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.fade-in-delay {
+    animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+.fade-in-delay-2 {
+    animation: fadeIn 0.8s ease-out 0.4s both;
+}
+
+.fade-in-delay-3 {
+    animation: fadeIn 0.8s ease-out 0.6s both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================== ACCESSIBILITY ==================== */
+@media (prefers-reduced-motion: reduce) {
+    .info-card,
+    .btn-whatsapp,
+    .btn-blue,
+    .info-card .card-icon {
+        transition: none;
+        animation: none;
+    }
+}

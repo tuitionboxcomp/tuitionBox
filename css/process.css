@@ -1,0 +1,324 @@
+/* ==================== PROCESS PAGE SPECIFIC STYLES ==================== */
+
+/* Process Hero Section */
+.process-hero {
+    background: linear-gradient(135deg, #FF8C00 0%, #FF6A00 50%, #FF4500 100%);
+    padding: 100px 10% 80px;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.process-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.process-hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.process-hero h1 span {
+    font-weight: 800;
+    background: linear-gradient(to right, #fff, #FFE4B5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.process-hero .subtitle {
+    font-size: 20px;
+    opacity: 0.95;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+/* Process Page Content */
+.process-page {
+    padding: 80px 10%;
+    background: var(--light-bg);
+}
+
+/* Steps Container */
+.steps-container {
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+}
+
+/* Individual Step */
+.step {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Step Number Badge */
+.step-number {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--primary-orange), var(--primary-blue));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+}
+
+/* Step Icon */
+.step-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.step:hover .step-icon {
+    transform: scale(1.15) rotate(5deg);
+}
+
+/* Step Title */
+.step h3 {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+/* Step Description */
+.step p {
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+/* Step Connector */
+.step-connector {
+    width: 4px;
+    height: 40px;
+    background: linear-gradient(180deg, var(--primary-orange), var(--primary-blue));
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    opacity: 0.3;
+}
+
+/* CTA Box */
+.cta-box {
+    background: linear-gradient(135deg, rgba(255, 140, 0, 0.05) 0%, rgba(0, 123, 255, 0.05) 100%);
+    padding: 50px 40px;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid rgba(255, 140, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-text {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 25px;
+}
+
+.btn-orange {
+    display: inline-block;
+    padding: 16px 48px;
+    background: var(--primary-orange);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.btn-orange:hover {
+    background: #e67e00;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 768px) {
+    .process-hero {
+        padding: 80px 5% 60px;
+        min-height: 300px;
+    }
+
+    .process-hero h1 {
+        font-size: 36px;
+    }
+
+    .process-hero .subtitle {
+        font-size: 18px;
+    }
+
+    .process-page {
+        padding: 60px 5%;
+    }
+
+    .step {
+        padding: 35px 25px;
+    }
+
+    .step-number {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+        top: 15px;
+        left: 15px;
+    }
+
+    .step-icon {
+        font-size: 56px;
+    }
+
+    .step h3 {
+        font-size: 22px;
+    }
+
+    .step p {
+        font-size: 15px;
+    }
+
+    .step-connector {
+        height: 30px;
+    }
+
+    .cta-box {
+        padding: 40px 30px;
+    }
+
+    .cta-text {
+        font-size: 20px;
+    }
+
+    .btn-orange {
+        padding: 14px 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .process-hero h1 {
+        font-size: 28px;
+    }
+
+    .process-hero .subtitle {
+        font-size: 16px;
+    }
+
+    .step {
+        padding: 30px 20px;
+    }
+
+    .step-number {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .step-icon {
+        font-size: 48px;
+    }
+
+    .step h3 {
+        font-size: 20px;
+    }
+
+    .step p {
+        font-size: 14px;
+    }
+
+    .step-connector {
+        height: 25px;
+    }
+
+    .cta-box {
+        padding: 35px 25px;
+    }
+
+    .cta-text {
+        font-size: 18px;
+    }
+
+    .btn-orange {
+        padding: 12px 32px;
+        font-size: 15px;
+    }
+}
+
+/* ==================== ANIMATIONS ==================== */
+.fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.fade-in-delay {
+    animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+.fade-in-delay-2 {
+    animation: fadeIn 0.8s ease-out 0.4s both;
+}
+
+.fade-in-delay-3 {
+    animation: fadeIn 0.8s ease-out 0.6s both;
+}
+
+.fade-in-delay-4 {
+    animation: fadeIn 0.8s ease-out 0.8s both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================== ACCESSIBILITY ==================== */
+@media (prefers-reduced-motion: reduce) {
+    .step,
+    .btn-orange,
+    .step-icon {
+        transition: none;
+        animation: none;
+    }
+}
